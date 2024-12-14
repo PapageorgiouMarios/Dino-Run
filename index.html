@@ -1,0 +1,64 @@
+<!--
+    The index.html file is used to start the game.
+    For testing purposes we added the Live Server Visual Studio Extension
+    (index.html: Right click > Open with Live Server)
+-->
+<!DOCTYPE html>
+<html lang="en"> <!--Default language: English-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Dino Run</title>
+
+    <style>
+        *{
+         padding: 0px;
+         margin: 0px;
+        }
+
+        body
+        {
+          display: flex; 
+          align-items: center;
+          justify-content: center;
+          height: 100vh; 
+
+          user-select: none; /* Prevents text and other elements on the page from being selected */
+          touch-action: none; /* Disables touch interactions like scrolling, zooming, or panning on touch devices */
+          -webkit-touch-callout: none; /* Prevents the context menu (like copy/paste options) from appearing on iOS devices when holding down on an element */
+          -webkit-user-select: none; /* Disables text selection on WebKit-based browsers (like Chrome, Safari) */
+          -khtml-user-select: none; /* Disables text selection on Konqueror-based browsers (rarely used) */
+          -moz-user-select: none; /* Disables text selection on Firefox */
+          -ms-user-select: none; /* Disables text selection on Internet Explorer and older Edge browsers */
+          user-select: none; /* Again, the universal property to ensure text selection is disabled */
+          outline: none; /* Removes the focus outline (border) around elements when they're clicked or focused */
+          -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+          /* Use the project's custom font */
+          font-family: "MyCustomFont", sans-serif;  
+        }
+
+        canvas
+        {
+          border: 2px solid grey;
+        }
+
+        /*This is where we add our own font file so that it can be used in our project*/
+        @font-face {
+            font-family: "MyCustomFont";
+            src: url("fonts/ARCADE_N.TTF") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    </style>
+
+    <!--By default when the page opens it runs the index.js file-->
+    <script src="index.js" defer type="module"></script>
+
+</head>
+<body>
+    <!--We give the canvas an id so that the script file finds it easily-->
+    <canvas id="game"></canvas>
+</body>
+</html>
